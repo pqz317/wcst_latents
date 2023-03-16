@@ -3,7 +3,7 @@ services:
   notebook:
     build: .
     ports:
-      - "${JUPYTER_PORT:-8886}:8888"  
+      - "${JUPYTER_PORT:-127.0.0.1:8886}:8888"  
     environment:
       - "JUPYTER_PASSWORD=${JUPYTER_PASSWORD:-nbpwd}"
       - "S3_ENDPOINT=${S3_ENDPOINT}"
